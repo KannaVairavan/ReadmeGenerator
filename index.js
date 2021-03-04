@@ -45,7 +45,7 @@ const promptUser=() =>{
                 "Mozilla Public License 1.1 (MPL 1.1)",
                 "Common Public License Version 1.0 (CPL)",
                 "Eclipse Public License 1.0",
-                "Apache License, Version 2.0",
+                "Apache License, Version 2.0"],
         },
         {
             type: 'input',
@@ -95,4 +95,11 @@ const generateReadMe=(answers)=>
     _This README was generated with []()
 
     `;
+}
+
+const init = () => {
+    promptUser() 
+        .then((answers) => fs.writeReadmeAsync('', generateReadMe(answers) ))
+        .then(() => console.log('Successfully wrote to README.md'))
+        .catch((err) => console.error(err));
 }
