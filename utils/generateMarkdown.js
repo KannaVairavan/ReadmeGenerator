@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  `[![License:${license}](https://img.shields.io/badge/license-${renderLicenseSection})](${renderLicenseLink})<br />`
+  `[![License:${license}](https://img.shields.io/badge/license-${renderLicenseSection(license)})](${renderLicenseLink(license)})<br />`
 }
 
 // TODO: Create a function that returns the license link
@@ -36,6 +36,7 @@ function renderLicenseLink(license) {
                default:
                   renderLicenseLink=""
   }
+  console.log(renderLicenseLink);
   return  renderLicenseLink
 }
 
@@ -71,7 +72,9 @@ function renderLicenseSection(license) {
      default:
       renderLicenseSection=""
 }
+console.log(renderLicenseSection);
 return  renderLicenseSection
+
 }
 
 // TODO: Create a function to generate markdown for README
