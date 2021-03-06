@@ -74,7 +74,7 @@ const init = () => {
     promptUser() 
     // create markdown file
 
-   .then ((data) => writeReadmefileAsync('./dist/README.md', generateMarkdown(data)))
+   .then ((data) => writeReadmefileAsync('./output/README.md', generateMarkdown(data)))
    .then(() => console.log('Successfully wrote to README.md'))
    .catch((err) => console.error(err));
 }
