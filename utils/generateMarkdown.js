@@ -1,16 +1,78 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  `[![License:${license}](https://img.shields.io/badge/license-${renderLicenseSection})](${renderLicenseLink})<br />`
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  switch (license){
+               case 'Apache':
+                  renderLicenseLink='https://opensource.org/licenses/Apache-2.0'
+                  break;
+                
+               case 'GNU':
+                  renderLicenseLink='https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html'
+                  break;
+               case 'IBM':
+                  renderLicenseLink='https://opensource.org/licenses/IPL-1.0'
+                  break;
+               case 'ISC':
+                  renderLicenseLink='https://opensource.org/licenses/MPL-2.0'
+                  break;
 
+               case 'MIT':
+                  renderLicenseLink='https://opensource.org/licenses/MIT'
+                  break;
+
+               case 'Mozilla':
+                  renderLicenseLink='https://opensource.org/licenses/MPL-2.0'
+                  break;
+
+               case 'Open':
+                  renderLicenseLink='https://opendatacommons.org/licenses/by/'
+                  break;
+               default:
+                  renderLicenseLink=""
+  }
+  return  renderLicenseLink
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  switch (license){
+    case 'Apache':
+       renderLicenseSection='Apache%202.0-blue.svg'
+       break;
+     
+     case 'GNU':
+        renderLicenseSection='GPL%20v2-blue.svg'
+        break;
+     case 'IBM':
+        renderLicenseSection='IPL%201.0-blue.svg'
+        break;
+     case 'ISC':
+        renderLicenseSection='MPL%202.0-brightgreen.svg'
+        break;
+
+     case 'MIT':
+        renderLicenseSection='MIT-yellow.svg'
+        break;
+
+     case 'Mozilla':
+        renderLicenseSection='MPL%202.0-brightgreen.svg'
+        break;
+
+     case 'Open':
+        renderLicenseSection='ODC_BY-brightgreen.svg'
+        break;
+     default:
+      renderLicenseSection=""
+}
+return  renderLicenseSection
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
