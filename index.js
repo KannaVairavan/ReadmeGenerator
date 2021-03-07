@@ -36,7 +36,7 @@ const promptUser=() =>{
             name: "license",
             choices: [
                 "Apache",
-                "Academic",
+                "IBM",
                 "GNU",
                 "ISC",
                 "MIT",
