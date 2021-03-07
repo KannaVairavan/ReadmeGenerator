@@ -24,7 +24,7 @@ Below is the walkthrough video that demonstrates the functionality of the README
 
 [![Readme video]](https://drive.google.com/file/d/s-m25gctjgZOTRQ3HRO9osJY71jPMN4L/view)
 
-<img src="./assets/video/GenerateReadme.gif" alt="Readme video" width=100% >
+<img src="./assets/Video/GenerateReadme.gif" alt="Readme video"  >
 
 ## Repository
 
